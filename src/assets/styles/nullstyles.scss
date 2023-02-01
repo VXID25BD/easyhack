@@ -29,17 +29,18 @@ html,body{
 }
 
 body{
-	font-family: $ff-primary;
-	color: $color-text-primary;
+	font-family: $ff_primary;
+	color: $color-text_primary;
+    background-color: $color-bg-color_primary;
 	font-size: 16px;
-	font-weight: $fw-regular;
+	font-weight: $fw_regular;
 
 	// &._lock{
 	// 	overflow: hidden;
 	// }
 }
 
-input,button,textarea{font-family: $ff-primary;}
+input,button,textarea{font-family: $ff_primary;}
 
 input::-ms-clear{display: none;}
 button{cursor: pointer;}

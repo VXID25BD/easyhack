@@ -3,21 +3,18 @@
 @import "vars";
 
 body{
-    font-family: $ff-primary;
+    font-family: $ff_primary;
 
     &._lock{overflow: hidden;}
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: $fw-semibold;
+    font-weight: $fw_semibold;
     font-size: 55px;
 }
 
-h1{font-weight: $fw-extrabold;}
-h2{
-    font-weight: $fw-extrabold;
-    font-size: 45px;
-}
+h1,h2{font-weight: $fw_extrabold;}
+h2{font-size: 45px;}
 h3{font-size: 30px;}
 h4{font-size: 21px;}
 h5{font-size: 18px;}
@@ -38,8 +35,8 @@ h5{font-size: 18px;}
 // MODS
 // TEXT
 // FONT-WEIGHT
-.fw-sb{font-weight: $fw-semibold;}
-.fw-r{font-weight: $fw-regular;}
+._fw-sb{font-weight: $fw_semibold;}
+._fw-r{font-weight: $fw_regular;}
 
 /* COMPONENTS */
 @import "../../components/header/header.scss";
@@ -51,3 +48,5 @@ h5{font-size: 18px;}
 @import "../../components/ui/button/_play/_play.scss";
 @import "../../components/ui/button/button.scss";
 @import "../../components/ui/button/_border/_border.scss";
+@import "../../components/ui/body/b1/b1.scss";
+@import "../../components/ui/dropdown/dropdown.scss";

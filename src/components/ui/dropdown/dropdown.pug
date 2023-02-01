@@ -1,0 +1,15 @@
+mixin dropdown(classes, defaultOption={}, options=[])
+    div(class=`dropdown ${classes}`)
+        div(class=`dropdown__header`)
+            div(class=`dropdown__img`)
+                img(src=require(`../../../assets/images/lang/${defaultOption["img"]}`), alt=defaultOption["alt"])
+            p(class=`dropdown__text`)= defaultOption["text"]
+            <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 5L10 0L0 0L5 5Z" fill="#2E3A59"/>
+            </svg>
+        ul(class=`dropdown__body`)
+            each option in options
+                li(class=`dropdown__option`, data-dropdown-value=option["value"])
+                    div(class=`dropdown__img`)
+                        img(src=require(`../../../assets/images/lang/${option["img"]}`), alt=option["alt"])
+                    p(class=`dropdown__text`)= option["text"]

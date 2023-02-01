@@ -1,39 +1,44 @@
 // font-family
-$ff-primary: "Montserrat", sans-serif;
-$ff-secondary: "";
+$ff_primary: "Montserrat", sans-serif;
+$ff_secondary: "";
 
 // container limited
 $limited: 1180px;
 
+$header-height: 98px;
+
 // media breakpoints
-$points-sm: 576.98px;
-$points-md: 768.98px;
-$points-lg: 992.98px;
-$points-xl: 1200.98px;
-$points-xxl: 1400.98px;
+$points_sm: 576.98px;
+$points_md: 768.98px;
+$points_lg: 992.98px;
+$points_xl: 1200.98px;
+$points_xxl: 1400.98px;
 
 // font-weight
-$fw-regular: 400;
-$fw-medium: 500;
-$fw-semibold: 600;
-$fw-bold: 700;
-$fw-extrabold: 800;
-$fw-black: 900;
+$fw_regular: 400;
+$fw_medium: 500;
+$fw_semibold: 600;
+$fw_bold: 700;
+$fw_extrabold: 800;
+$fw_black: 900;
 
 // colors
 // linear
-$color-purple-linear: linear-gradient(89.46deg, #DDA6FF -5.85%, #D828F4 106.28%);
-$color-red-linear: linear-gradient(98.51deg, #FF9898 14.64%, #FF1F00 102.27%);
-$color-blue-linear: linear-gradient(103.24deg, #05FFFF -7.39%, #0AA6FE 85.9%);
-$color-orange-linear: linear-gradient(98.89deg, #FF9B05 25.06%, #FF8F3F 88.94%);
+$color-purple_linear: linear-gradient(89.46deg, #DDA6FF -5.85%, #D828F4 106.28%);
+$color-red_linear: linear-gradient(98.51deg, #FF9898 14.64%, #FF1F00 102.27%);
+$color-blue_linear: linear-gradient(103.24deg, #05FFFF -7.39%, #0AA6FE 85.9%);
+$color-orange_linear: linear-gradient(98.89deg, #FF9B05 25.06%, #FF8F3F 88.94%);
 
 // solid
-$color-blue-solid: #0AA6FE;
-$color-red-solid: #FF3B3B;
-$color-black-solid: #2E3A59;
-$color-white-solid: #FFFFFF;
-$color-grey-solid: #828282;
+$color-blue_solid: #0AA6FE;
+$color-red_solid: #FF3B3B;
+$color-black_solid: #2E3A59;
+$color-white_solid: #FFFFFF;
+$color-dark-white_solid: #F5F9FF;
+$color-grey_solid: #828282;
 
-$color-text-white: $color-white-solid;
-$color-text-primary: $color-black-solid;
-$color-text-secondary: $color-grey-solid;
+$color-bg-color_primary: $color-dark-white_solid;
+
+$color-text_white: $color-white_solid;
+$color-text_primary: $color-black_solid;
+$color-text_secondary: $color-grey_solid;

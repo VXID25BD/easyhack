@@ -2,6 +2,8 @@
 include ../../components/ui/button-text/bt1/bt1.pug
 include ../../components/ui/button/_play/_play.pug
 include ../../components/ui/button/_border/_border.pug
+include ../../components/ui/body/b1/b1.pug
+include ../../components/ui/dropdown/dropdown.pug
 
 html(lang="ru")
     head
@@ -10,11 +12,18 @@ html(lang="ru")
         link(href=require("../../assets/styles/styles.scss") rel="stylesheet")
         title WEBPACK CONFIG PUG 2023
     body
-        .root 
+        .root
             include ../../components/header/header.pug
             main.page
-                +button_play("Посмотреть видео")
-                +button_border("Посмотреть видео")
-                //- include ../../components/hero/hero.pug
+                include ../../components/hero/hero.pug
+                include ../../components/function/function.pug
+                include ../../components/reviews/reviews.pug
+                include ../../components/tariffs/tariffs.pug
+                include ../../components/faq/faq.pug
+                +dropdown("language", {img: "ru.png", alt: "Ru", text: "RU", value: "ru"}, [
+                    {img: "ru.png", alt: "Ru", text: "RU", value: "ru"},
+                    {img: "ru.png", alt: "En", text: "EN", value: "en"},
+                ])
             include ../../components/footer/footer.pug
         script(src=require("./main.js"))
+        script(src=require("../../components/ui/dropdown/dropdown.js"))
