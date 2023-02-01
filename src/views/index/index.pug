@@ -1,5 +1,7 @@
 // include mixins
-//- include ../../components/ui/button/button.pug
+include ../../components/ui/button-text/bt1/bt1.pug
+include ../../components/ui/button/_play/_play.pug
+include ../../components/ui/button/_border/_border.pug
 
 html(lang="ru")
     head
@@ -11,6 +13,8 @@ html(lang="ru")
         .root 
             include ../../components/header/header.pug
             main.page
+                +button_play("Посмотреть видео")
+                +button_border("Посмотреть видео")
                 //- include ../../components/hero/hero.pug
             include ../../components/footer/footer.pug
         script(src=require("./main.js"))

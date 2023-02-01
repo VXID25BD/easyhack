@@ -35,9 +35,19 @@ h5{font-size: 18px;}
     margin: 0 auto;
 }
 
+// MODS
+// TEXT
+// FONT-WEIGHT
+.fw-sb{font-weight: $fw-semibold;}
+.fw-r{font-weight: $fw-regular;}
+
 /* COMPONENTS */
 @import "../../components/header/header.scss";
 @import "../../components/hero/hero.scss";
 @import "../../components/footer/footer.scss";
 
 /* UI */
+@import "../../components/ui/button-text/bt1/bt1.scss";
+@import "../../components/ui/button/_play/_play.scss";
+@import "../../components/ui/button/button.scss";
+@import "../../components/ui/button/_border/_border.scss";
