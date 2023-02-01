@@ -1,5 +1,5 @@
 // font-family
-$ff-primary: "";
+$ff-primary: "Montserrat", sans-serif;
 $ff-secondary: "";
 
 // container limited
@@ -13,13 +13,27 @@ $points-xl: 1200.98px;
 $points-xxl: 1400.98px;
 
 // font-weight
-$fw-light: 300;
 $fw-regular: 400;
 $fw-medium: 500;
 $fw-semibold: 600;
 $fw-bold: 700;
 $fw-extrabold: 800;
+$fw-black: 900;
 
 // colors
-$color-black: #000;
-$color-white: #fff;
+// linear
+$color-purple-linear: linear-gradient(89.46deg, #DDA6FF -5.85%, #D828F4 106.28%);
+$color-red-linear: linear-gradient(98.51deg, #FF9898 14.64%, #FF1F00 102.27%);
+$color-blue-linear: linear-gradient(103.24deg, #05FFFF -7.39%, #0AA6FE 85.9%);
+$color-orange-linear: linear-gradient(98.89deg, #FF9B05 25.06%, #FF8F3F 88.94%);
+
+// solid
+$color-blue-solid: #0AA6FE;
+$color-red-solid: #FF3B3B;
+$color-black-solid: #2E3A59;
+$color-white-solid: #FFFFFF;
+$color-grey-solid: #828282;
+
+$color-text-white: $color-white-solid;
+$color-text-primary: $color-black-solid;
+$color-text-secondary: $color-grey-solid;
