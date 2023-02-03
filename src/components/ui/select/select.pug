@@ -1,22 +1,4 @@
 mixin select(className, options={})
     - const {defaultItem, data} = options;
 
-    div(class=`select ${className}`)
-        div(class=`select__header ${className}__header`, data-type="trigger", data-value=defaultItem["value"])
-            div(class=`select__img ${className}__img`)
-                img(src=require(`../../../assets/images/lang/${defaultItem["img"]}`), alt=defaultItem["text"])
-            div(class=`select__text ${className}__text`)= defaultItem["text"]
-            <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 5L10 0L0 0L5 5Z" fill="#2E3A59"/>
-            </svg>
-        div(class=`select__dropdown ${className}__dropdown`)  
-            ul(class=`select__list ${className}__list`)
-                li(class=`select__item ${className}__item`, data-type="item", data-value=defaultItem["value"])
-                    div(class=`select__img ${className}__img`)
-                        img(src=require(`../../../assets/images/lang/${defaultItem["img"]}`), alt=defaultItem["text"])
-                    div(class=`select__text ${className}__text`)= defaultItem["text"]
-                each item in data
-                    li(class=`select__item ${className}__item`, data-type="item", data-value=item["value"])
-                        div(class=`select__img ${className}__img`)
-                            img(src=require(`../../../assets/images/lang/${item["img"]}`), alt=item["text"])
-                        div(class=`select__text ${className}__text`)= item["text"]
+    div(class="select language")

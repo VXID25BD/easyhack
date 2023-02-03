@@ -8,7 +8,11 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'dist/'),
         publicPath: '/',
-        filename: 'assets/js/[name].[contenthash:8].js'
+    },
+    resolve: {
+      alias: {
+        Images: path.join(__dirname, './src/images/'),
+      }
     },
     plugins: [
         new PugPlugin({
@@ -34,12 +38,12 @@ module.exports = {
             //☝🏽 Load Sass files
           },
           {
-            // To use images on pug files:
             test: /\.(png|jpg|jpeg|ico)/,
             type: 'asset/resource',
             generator: {
-              filename: 'assets/img/[name][hash:8].[ext]'
-            }
+              // output filename of images
+              filename: 'assets/img/[name].[hash:8][ext]',
+            },
           },
           {
             // To use fonts on pug files:

@@ -12,6 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.7.3",
+    "file-loader": "^6.2.0",
     "pug-plugin": "^4.9.2",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",

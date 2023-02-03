@@ -1,40 +1,81 @@
 "use strict";
 
+// console.log(img);
+const renderTemplate = (items, selectedId) => {
+    const selectItem = items.find(item => item.id === selectedId);
+
+    const itemsEls = items.map(item => `<li class="select__item" data-type="item" data-id="${item.id}" >
+    <div class="select__img">
+        <img src=${require(`../../../assets/images/lang/${item.img}`)} alt="${item.value}">
+    </div>
+    <div class="select__value">${item.value}</div>
+</li>`);
+
+    return `<div class="select__header" data-type="trigger" data-id="${selectItem.id}">
+        <div class="select__img">
+            <img src=${require(`../../../assets/images/lang/${selectItem.img}`)} alt="${selectItem.value}">
+        </div>
+        <div class="select__value">${selectItem.value}</div>
+        <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 5L10 0L0 0L5 5Z" fill="#2E3A59"/>
+        </svg>
+
+    </div>
+    <div class="select__body">
+        <ul class="select__list">
+            ${itemsEls.join("")}
+        </div>
+    </div>
+`
+}
+
 class Select{
-    constructor(selector,){
+    constructor(selector, options){
         this.el = document.querySelector(selector);
+        this.options = options;
+        this.selectedId = options.selectedId;
+        
+        this.#render();
         this.#setup();
     }
     #setup(){
         this.clickHandler = this.clickHandler.bind(this);
         this.el.addEventListener("click", this.clickHandler);
+        this.value = this.el.querySelector(".select__value");
+        this.img = this.el.querySelector(".select__img").querySelector("img");
+        console.log(this.img);
     }
-
+    #render(){
+        const {items} = this.options;
+        this.el.innerHTML = renderTemplate(items, this.selectedId);
+    }
+    get current() {
+        return this.options.items.find(item => item.id === Number(this.selectedId));
+    }
     clickHandler(e){
         const target = e.target;
-        console.log(target);
+        const el = this.clickChecker(target);
+        const {type} = el.dataset;
 
-        if (target.dataset["type"] === "trigger" || parent.dataset["type"] === "trigger") {
+        if (type === "trigger") {
             this.toggle();
-        }
-        if (type === "item"){
-            this.select(e);
+        } else if (type === "item"){
+            const {id} = el.dataset;
+            this.select(id);
         }
     }
-    clickChecker(){
-        
+    clickChecker(target){
+        let el = target;
+        while (!el.dataset.hasOwnProperty("type")){
+            el = el.parentNode;
+        }
+        return el;
     }
-    select(e){
-        const item = e.target;
-
-        const itemValue = item.dataset.value;
-        const itemText = item.querySelector(".select__text").innerText;
-        const itemImgHref = item.querySelector("img").href;
-
-        const itemTrigger = this.el.querySelector(".select__header");
-        itemTrigger.dataset.value = itemValue;
-        itemTrigger.querySelector("img").href = itemImgHref;
-        itemTrigger.querySelector(".select__text").innerText = itemText;
+    select(id){
+        this.selectedId = id;
+        const currentItem = this.current;
+        this.value.innerHTML = currentItem.value;
+        this.img.src = require(`../../../assets/images/lang/${currentItem.img}`);
         this.close();
     }
     toggle(){
@@ -51,7 +92,12 @@ class Select{
     close(){
         this.el.classList.remove("_open");
     }
-
 }
 
-const selectLanguage = new Select(".language");
+const languageSelect = new Select(".language", {
+    selectedId: 1,
+    items: [
+        {id: 1, img: "en.png", value: "En"},
+        {id: 2, img: "ru.png", value: "Ru"},
+    ]
+})
