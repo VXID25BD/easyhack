@@ -1,4 +1,4 @@
-.dropdown{
+.select{
     position: relative;
     max-width: 150px;
 
@@ -11,9 +11,9 @@
         border-radius: 5px;
         background-color: $color-white_solid;
     }
-    &._open &__body{display: flex;}
+    &._open &__dropdown{display: flex;}
 
-    &__body{
+    &__dropdown{
         position: absolute;
         top: 110%;
         left: 0;
@@ -25,7 +25,7 @@
         background-color: $color-white_solid;
         display: none;
     }
-    &__option{
+    &__item{
         cursor: pointer;
         display: flex;
         align-items: center;
