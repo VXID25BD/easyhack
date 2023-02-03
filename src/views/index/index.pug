@@ -3,7 +3,8 @@ include ../../components/ui/button-text/bt1/bt1.pug
 include ../../components/ui/button/_play/_play.pug
 include ../../components/ui/button/_border/_border.pug
 include ../../components/ui/body/b1/b1.pug
-include ../../components/ui/select/select.pug
+include ../../components/ui/dropdown/dropdown.pug
+include ../../components/select-platform/select-platform.pug
 
 html(lang="ru")
     head
@@ -22,4 +23,5 @@ html(lang="ru")
                 include ../../components/faq/faq.pug
             include ../../components/footer/footer.pug
         script(src=require("./main.js"))
-        script(src=require("../../components/ui/select/select.js"))
+        script(src=require("../../components/ui/dropdown/dropdown.js"))
+        script(src=require("../../components/select-platform/select-platform.js"))

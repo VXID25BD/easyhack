@@ -4,32 +4,32 @@
 const renderTemplate = (items, selectedId) => {
     const selectItem = items.find(item => item.id === selectedId);
 
-    const itemsEls = items.map(item => `<li class="select__item" data-type="item" data-id="${item.id}" >
-    <div class="select__img">
+    const itemsEls = items.map(item => `<li class="dropdown__item" data-type="item" data-id="${item.id}" >
+    <div class="dropdown__img">
         <img src=${require(`../../../assets/images/lang/${item.img}`)} alt="${item.value}">
     </div>
-    <div class="select__value">${item.value}</div>
+    <div class="dropdown__value">${item.value}</div>
 </li>`);
 
-    return `<div class="select__header" data-type="trigger" data-id="${selectItem.id}">
-        <div class="select__img">
+    return `<div class="dropdown__header" data-type="trigger" data-id="${selectItem.id}">
+        <div class="dropdown__img">
             <img src=${require(`../../../assets/images/lang/${selectItem.img}`)} alt="${selectItem.value}">
         </div>
-        <div class="select__value">${selectItem.value}</div>
+        <div class="dropdown__value">${selectItem.value}</div>
         <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 5L10 0L0 0L5 5Z" fill="#2E3A59"/>
         </svg>
 
     </div>
-    <div class="select__body">
-        <ul class="select__list">
+    <div class="dropdown__body">
+        <ul class="dropdown__list">
             ${itemsEls.join("")}
         </div>
     </div>
 `
 }
 
-class Select{
+class Dropdown{
     constructor(selector, options){
         this.el = document.querySelector(selector);
         this.options = options;
@@ -41,8 +41,8 @@ class Select{
     #setup(){
         this.clickHandler = this.clickHandler.bind(this);
         this.el.addEventListener("click", this.clickHandler);
-        this.value = this.el.querySelector(".select__value");
-        this.img = this.el.querySelector(".select__img").querySelector("img");
+        this.value = this.el.querySelector(".dropdown__value");
+        this.img = this.el.querySelector(".dropdown__img").querySelector("img");
         console.log(this.img);
     }
     #render(){
@@ -94,7 +94,7 @@ class Select{
     }
 }
 
-const languageSelect = new Select(".language", {
+const languageDropdown = new Dropdown(".language", {
     selectedId: 1,
     items: [
         {id: 1, img: "en.png", value: "En"},

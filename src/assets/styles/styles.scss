@@ -42,6 +42,7 @@ h5{font-size: 18px;}
 @import "../../components/header/header.scss";
 @import "../../components/hero/hero.scss";
 @import "../../components/footer/footer.scss";
+@import "../../components/select-platform/select-platform.scss";
 
 /* UI */
 @import "../../components/ui/button-text/bt1/bt1.scss";
@@ -49,4 +50,4 @@ h5{font-size: 18px;}
 @import "../../components/ui/button/button.scss";
 @import "../../components/ui/button/_border/_border.scss";
 @import "../../components/ui/body/b1/b1.scss";
-@import "../../components/ui/select/select.scss";
+@import "../../components/ui/dropdown/dropdown.scss";

@@ -1,0 +1,35 @@
+.select-platform{
+    &__body{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__item{
+        padding: 20px 30px;
+        background-color: $color-white_solid;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: $fw-bold;
+        color: $color-grey_solid;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        transition: .3s;
+
+        .icon{
+            fill: $color-grey_solid;
+            width: 30px;
+            height: 40px;
+            transition: .3s;
+        }
+
+        &._active{
+            background: $color-blue_linear;
+            color: $color-white_solid;
+            box-shadow: 0px 15px 25px 0px rgba($color-blue_solid, .3);
+
+            .icon{fill: $color-white_solid;}
+        }
+    }
+}
