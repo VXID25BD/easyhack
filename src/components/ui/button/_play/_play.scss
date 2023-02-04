@@ -1,10 +1,6 @@
 .button_play{
-    display: flex;
-    align-items: center;
-    gap: 18px;
     padding: 0px 29px;
-    background-color: $color-red_solid;
-    color: $color-white_solid;
+    background: $color-red_solid;;
 
     svg{
         width: 33px;
