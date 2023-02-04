@@ -39,15 +39,19 @@ h5{font-size: 18px;}
 ._fw-sb{font-weight: $fw_semibold;}
 ._fw-r{font-weight: $fw_regular;}
 
+// MODULES
+@import "../../components/slider/slider.scss";
+@import "../../components/ui/dropdown/dropdown.scss";
+
 /* COMPONENTS */
 @import "../../components/header/header.scss";
 @import "../../components/hero/hero.scss";
 @import "../../components/footer/footer.scss";
 @import "../../components/select-platform/select-platform.scss";
 @import "../../components/function/function.scss";
-@import "../../components/slider/slider.scss";
 @import "../../components/function/function-slider/function-slider.scss";
 @import "../../components/reviews/reviews.scss";
+@import "../../components/reviews/reviews-slider/reviews-slider.scss";
 
 /* UI */
 @import "../../components/ui/button-text/bt1/bt1.scss";
@@ -56,4 +60,3 @@ h5{font-size: 18px;}
 @import "../../components/ui/button/_border/_border.scss";
 @import "../../components/ui/body/b1/b1.scss";
 @import "../../components/ui/body/b2/b2.scss";
-@import "../../components/ui/dropdown/dropdown.scss";

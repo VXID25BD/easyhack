@@ -1,46 +1,6 @@
+include ./reviews-slider/reviews-slider.pug
+
 section.reviews.outer 
     .container
         h2 ЧТО ГОВОРЯТ О НАС
-        div(class=`slider ${"reviews-slider"}`)
-            div(class=`slider__wrapper ${"reviews-slider"}__wrapper`)
-                div(class=`slider__slide ${"reviews-slider"}__slide slide slide-${"reviews-slider"}`, data-id=1)
-                    div(class=`slide-reviews-slider__body`)
-                        div(class=`slide-${"reviews-slider"}__img`)
-                            img(src=require("../../assets/images/reviews/1.jpg"), alt="Avatar author")
-                        h5(class=`slide-${"reviews-slider"}__author`) Егор Черняев
-                            <svg width="29" height="11" viewBox="0 0 29 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0.916728C0 0.410467 0.410406 6.10352e-05 0.916667 6.10352e-05L18.9167 6.10352e-05C24.4855 6.10352e-05 29 4.51452 29 10.0834V10.0834C29 10.5897 28.5896 11.0001 28.0833 11.0001L10.0833 11.0001C4.51446 11.0001 0 6.4856 0 0.916728V0.916728Z" fill="url(#red_linear)"/>
-                                <defs>
-                                    <linearGradient id="red_linear" x1="7.94711" y1="-7.77167" x2="33.2287" y2="2.2004" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#FF9898"/>
-                                        <stop offset="1" stop-color="#FF1F00"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        +b2("Рекомендую данный софт! Аналогов не нашел нигде, я решил не заморачиваться и сразу приобрел ПРО версию и теперь играю в свое удовольствие.")
-                div(class=`slider__slide ${"reviews-slider"}__slide slide slide-${"reviews-slider"}`, data-id=2)
-                    div(class=`slide-reviews-slider__body`)
-                        div(class=`slide-${"reviews-slider"}__img`)
-                            img(src=require("../../assets/images/reviews/1.jpg"), alt="Avatar author")
-                        h5(class=`slide-${"reviews-slider"}__author`) Егор Черняев
-                            <svg width="29" height="11" viewBox="0 0 29 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0.916728C0 0.410467 0.410406 6.10352e-05 0.916667 6.10352e-05L18.9167 6.10352e-05C24.4855 6.10352e-05 29 4.51452 29 10.0834V10.0834C29 10.5897 28.5896 11.0001 28.0833 11.0001L10.0833 11.0001C4.51446 11.0001 0 6.4856 0 0.916728V0.916728Z" fill="url(#red_linear)"/>
-                                <defs>
-                                    <linearGradient id="red_linear" x1="7.94711" y1="-7.77167" x2="33.2287" y2="2.2004" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#FF9898"/>
-                                        <stop offset="1" stop-color="#FF1F00"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        +b2("Рекомендую данный софт! Аналогов не нашел нигде, я решил не заморачиваться и сразу приобрел ПРО версию и теперь играю в свое удовольствие.")
-            .slider__buttons
-                button.slider__button.slider__button_prev
-                    .slider__button-wrapper
-                        <svg width="21" height="37" viewBox="0 0 21 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.7762 0.634642L0.634767 18.6346L17.7762 36.6346L20.6348 33.635L6.3479 18.6346L20.6348 3.63429L17.7762 0.634642Z" fill="white"/>
-                        </svg>
-                button.slider__button.slider__button_next
-                    .slider__button-wrapper
-                        <svg width="20" height="36" viewBox="0 0 20 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2.85859 35.9999L20 17.9999L2.85859 -9.15527e-05L0 2.99955L14.2869 17.9999L0 33.0003L2.85859 35.9999Z" fill="white"/>
-                        </svg>
+        +reviews-slider()

@@ -38,14 +38,12 @@ class Slider{
     next() {
         this._currentSlideId = this._currentSlideId < this._countSlides ? this._currentSlideId + 1 : 1;
         this._offset = this.currentSlide.getBoundingClientRect().width;
-        console.log(this._offset);
         this._move();
     }
 
     prev() {
         this._currentSlideId = this._currentSlideId > 1 ? this._currentSlideId - 1 : this._countSlides;
         this._offset = this.currentSlide.getBoundingClientRect().width;
-        console.log(this._offset);
         this._move();
     }
 }
