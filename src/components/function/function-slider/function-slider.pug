@@ -1,9 +1,18 @@
-// template
-mixin class-slider()
-    .slider.class
-        .slider__wrapper.class__wrapper
-            .slider__slide.class__slide.slide-class
-                .slide-class__body
+mixin function-slider()
+    .slider.function-slider
+        .slider__wrapper.function-slider__wrapper
+                .slider__slide.function-slider__slide.slide-function-slider
+                    .slide-function-slider__body
+                        .slide-function-slider__img
+                            img(src=require("../../../assets/images/iphone.png"), alt="Iphone")
+                .slider__slide.function-slider__slide.slide-function-slider
+                    .slide-function-slider__body
+                        .slide-function-slider__img
+                            img(src=require("../../../assets/images/iphone.png"), alt="Iphone")
+                .slider__slide.function-slider__slide.slide-function-slider
+                    .slide-function-slider__body
+                        .slide-function-slider__img
+                            img(src=require("../../../assets/images/iphone.png"), alt="Iphone")
         .slider__buttons
             button.slider__button.slider__button_prev
                 <svg viewBox="0 0 54 28" xmlns="http://www.w3.org/2000/svg">
