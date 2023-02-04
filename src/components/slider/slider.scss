@@ -2,16 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    overflow: hidden;
+    
     &__buttons{
         display: flex;
         align-items: center;
         gap: 30px;
     }
+    &__wrapper{
 
-    &__wrapper{overflow: hidden;}
-    
-    &__container{
         display: flex;
         align-items: center;
         position: relative;

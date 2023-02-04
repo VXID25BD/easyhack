@@ -1,16 +1,15 @@
-mixin slider()
-    .slider
-        .slider__wrapper
-            .slider__container
-                div(class="slider__slide")
-                    .wrapper
-                        .slider__slide-img
-                            img(src=require("../../assets/images/iphone.png"), alt="Iphone")
-                div(class="slider__slide")
-                    .slider__slide-img
+mixin slider(className)
+    div(class=`slider ${className}`)
+        div(class=`slider__wrapper ${className}__wrapper`)
+            div(class=`slider__container ${className}__container`)
+                div(class=`slider__slide ${className}__slide`)
+                    div(class=`slider__slide-img ${className}__slide-img`)
                         img(src=require("../../assets/images/iphone.png"), alt="Iphone")
-                div(class="slider__slide")
-                    .slider__slide-img
+                div(class=`slider__slide ${className}__slide`)
+                    div(class=`slider__slide-img ${className}__slide-img`)
+                        img(src=require("../../assets/images/iphone.png"), alt="Iphone")
+                div(class=`slider__slide ${className}__slide`)
+                    div(class=`slider__slide-img ${className}__slide-img`)
                         img(src=require("../../assets/images/iphone.png"), alt="Iphone")
         .slider__buttons
             button.slider__button.slider__button_prev
