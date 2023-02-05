@@ -1,6 +1,6 @@
 .reviews-slider{
     &__wrapper{
-        padding-top: 42px;
+        padding: 42px 0px;
     }
 
     .slider__button{
@@ -44,6 +44,25 @@
         align-items: center;
         text-align: center;
         position: relative;
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: -25px;
+            left: 0;
+            width: 48px;
+            height: 38px;
+            background: url("../../assets/images/reviews/left-quote-mark.png");
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: -25px;
+            right: 0;
+            width: 48px;
+            height: 38px;
+            background: url("../../assets/images/reviews/right-quote-mark.png");
+        }
     }
     h5{
         padding-top: 72px;
