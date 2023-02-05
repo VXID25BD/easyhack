@@ -1,4 +1,4 @@
-.title_secondary{
+.title-decor{
     position: relative;
 
     &::before,
@@ -11,12 +11,12 @@
         height: 40px;
     }
 
+    &::before{
+        top: -10px;
+        left: 0px;
+    }
     &::after{
         top: -22px;
         left: -12px;
-    }
-    &::before{
-        bottom: -22px;
-        right: -12px;
-    }
+    } 
 }

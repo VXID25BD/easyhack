@@ -1,0 +1,14 @@
+.title-decor{
+    &_between{
+        &::after{
+            top: -22px;
+            left: -12px;
+        }
+        &::before{
+            top: auto;
+            left: auto;
+            bottom: -22px;
+            right: -12px;
+        }
+    }
+}

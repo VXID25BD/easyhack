@@ -1,0 +1,5 @@
+.title-decor{
+    &_between{
+        &::after{background-color: $color-blue_solid;}
+    }
+}
