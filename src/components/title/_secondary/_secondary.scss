@@ -1,0 +1,22 @@
+.title_secondary{
+    position: relative;
+
+    &::before,
+    &::after{
+        content: "";
+        position: absolute;
+        transform: rotate(45deg);
+        background-color: $color-orange_solid;
+        width: 8px;
+        height: 40px;
+    }
+
+    &::after{
+        top: -22px;
+        left: -12px;
+    }
+    &::before{
+        bottom: -22px;
+        right: -12px;
+    }
+}
