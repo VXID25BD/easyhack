@@ -1,0 +1,9 @@
+mixin tariff__position(status, text)
+    li.tariff__position.position
+        if status
+            svg(width="24", height="24", viewBox="0 0 25 24", xmlns="http://www.w3.org/2000/svg")
+                path(d="M8.50054 20.9999L0.5 13.1247L2.78541 10.8751L8.50296 16.4967L8.50054 16.4991L22.2146 2.99988L24.5 5.24948L10.7859 18.7503L8.50216 20.9983L8.50054 20.9999Z" fill="#00D121")
+        else
+            svg(width="24", height="24", viewBox="0 0 25 24", xmlns="http://www.w3.org/2000/svg")
+                path(d="M19.6871 2.99988L12.5 10.187L5.31286 2.99988L3.5 4.81273L10.6871 11.9999L3.5 19.187L5.31286 20.9999L12.5 13.8127L19.6871 20.9999L21.5 19.187L14.3129 11.9999L21.5 4.81273L19.6871 2.99988Z" fill="#FF3D00")
+        = text

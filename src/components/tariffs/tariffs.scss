@@ -1,0 +1,22 @@
+.tariffs{
+    padding-top: 100px;
+    padding-bottom: 70px;
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .title-decor{
+        margin-bottom: 52px;
+    }
+    .select-platform{margin-bottom: 54px;}
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        gap: 36px;
+    }
+    &__tariff{
+        flex: 1 0 416px;
+    }
+}

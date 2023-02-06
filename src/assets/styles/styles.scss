@@ -51,11 +51,15 @@ h5{font-size: 18px;}
 @import "../../components/hero/hero.scss";
 @import "../../components/footer/footer.scss";
 @import "../../components/select-platform/select-platform.scss";
+
 @import "../../components/function/function.scss";
 @import "../../components/function/function-slider/function-slider.scss";
+
 @import "../../components/reviews/reviews.scss";
 @import "../../components/reviews/reviews-slider/reviews-slider.scss";
+
 @import "../../components/tariffs/tariffs.scss";
+@import "../../components/tariffs/__tariff/tariffs_tariff.scss";
 
 /* UI */
 @import "../../components/ui/button-text/bt1/bt1.scss";

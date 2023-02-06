@@ -1,6 +1,11 @@
+include ./__tariff/tariffs__tariff.pug
+
 section.tariffs.outer 
     .container
         +title-decor("title-decor_between")
             h2 ТАРИФЫ
         +select-platform()
-        tariffs.body 
+        .tariffs__body 
+            +tariffs__tariff("common")
+            +tariffs__tariff("standart")
+            +tariffs__tariff("pro")

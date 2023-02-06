@@ -1,0 +1,44 @@
+.tariff-tariffs{
+    background-color: $color-white_solid;
+    border-radius: 5px 55px;
+
+    &__header{
+        background: $color-tariff_common;
+
+        padding: 23px 0px;
+        text-align: center;
+        border-radius: 5px 55px 0px;
+        text-transform: uppercase;
+        color: $color-white_solid;
+        margin-bottom: 36px;
+    }
+    &__time{
+        text-align: center;
+        margin-bottom: 27px;
+    }
+    &__body{
+        padding: 0px 50px;
+        margin-bottom: 15px;
+    }
+    &__price{
+        font-size: 45px;
+        font-weight: $fw-semibold;
+        text-align: center;
+        margin-bottom: 25px;
+
+        sup{margin-left: 24px;}
+    }
+    &_standart &__header{background: $color-tariff_standart;}
+    &_pro &__header{background: $color-tariff_pro;}
+    .button{
+        width: 100%;
+        border-radius: 0px 0px 5px 55px;
+        display: flex;
+        justify-content: center;
+    }
+    &__positions{
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
+    }
+}
