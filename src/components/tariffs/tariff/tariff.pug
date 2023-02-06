@@ -1,0 +1,54 @@
+mixin tariff(version)
+    -const commonVersionData = {
+        name: "обычная",
+        time: "1 месяц",
+        positions: [
+            {status: true, text: "Весь функционал чита"},
+            {status: true, text: "Обновления 1 раз в месяц"},
+            {status: true, text: "Техническая поддержка"},
+            {status: true, text: "Анти-Бан"},
+            {status: false, text: "Улучшенная оптимизация"},
+            {status: false, text: "Запуск на других телефонах"},
+            {status: false, text: "DPI+,  ASN, SKK"},
+        ],
+        price: 649
+    }
+    -const standartVersionData = {
+        name: "стандартная",
+        time: "3 месяца",
+        positions: [
+            {status: true, text: "Весь функционал чита"},
+            {status: true, text: "Постоянные обновления"},
+            {status: true, text: "Поддержка 24/7"},
+            {status: true, text: "Улучшенный Анти-Бан"},
+            {status: true, text: "Улучшенная оптимизация"},
+            {status: true, text: "Запуск на других телефонах"},
+            {status: false, text: "DPI+,  ASN, SKK"},
+        ],
+        price: 1449
+    }
+    -const proVersionData = {
+        name: "pro версия",
+        time: "навсегда",
+        positions: [
+            {status: true, text: "Весь функционал чита + NEW"},
+            {status: true, text: "Все обновления + BETA тест"},
+            {status: true, text: "Поддержка 24/7"},
+            {status: true, text: "Самый мощный Анти-Бан"},
+            {status: true, text: "Максимальная оптимизация"},
+            {status: true, text: "Запуск на других телефонах"},
+            {status: true, text: "DPI+,  ASN, SKK"},
+        ],
+        price: 2899
+    }
+    -const versionData = version === "common" ? commonVersionData : version === "standart" ? standartVersionData : proVersionData
+    .tariff
+        .tariff__header 
+            .tariff__tarrif-name= versionData.name
+        .tariff__body 
+            .tariff__time= versionData.time
+            ul.tariff__positions
+                li.tariff__position
+        .tariff__price 
+        .tariff__footer 
+            button.tariff__button
