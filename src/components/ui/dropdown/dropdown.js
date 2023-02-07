@@ -101,3 +101,4 @@ const languageDropdown = new Dropdown(".language", {
         {id: 2, img: "ru.png", value: "Ru"},
     ]
 })
+

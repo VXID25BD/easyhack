@@ -1,5 +1,5 @@
-mixin select-platform()
-    .select-platform
+mixin select-platform(className)
+    div(class=`select-platform ${className}`)
         .select-platform__body
             button(class="select-platform__item", data-type="item", data-id=1)
                 <svg class="icon" viewBox="0 0 33 29" xmlns="http://www.w3.org/2000/svg">

@@ -42,6 +42,5 @@ class Select{
     }
 }
 
-const selectPlatform = new Select(".select-platform", {
-    selectedId: 3
-});
+
+export default Select;
