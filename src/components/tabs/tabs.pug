@@ -1,6 +1,6 @@
 include ./__tab/tabs__tab.pug 
 
 mixin tabs(className, data)
-    .tabs
+    div(class=`tabs ${className}-tabs`)
         each item in data 
             +tab(item.title, item.body)

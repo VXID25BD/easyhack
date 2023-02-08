@@ -1,10 +1,10 @@
 .tab-tabs{
     cursor: pointer;
 
-    &._active &__icon::before{transform: rotate(-45deg);}
-    &._active &__icon::after{transform: rotate(45deg);}
+    &._open &__icon::before{transform: rotate(-45deg);}
+    &._open &__icon::after{transform: rotate(45deg);}
 
-    &._active &__body{
+    &._open &__body{
         display: block;
     }
 
@@ -19,18 +19,21 @@
         justify-content: space-between;
     }
     &__body{
-        margin-top: 40px;
         display: none;
-        position: relative;
-        padding-left: 19px;
 
-        &::before{
-            content: "";
-            position: absolute;
-            left: 0;
-            height: 100%;
-            width: 2px;
-            background: $color-blue_linear;
+
+        .b2{
+            position: relative;
+            padding-left: 19px;
+            
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                height: 100%;
+                width: 2px;
+                background: $color-blue_linear;
+            }
         }
     }
     &__icon{

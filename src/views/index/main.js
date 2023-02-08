@@ -15,5 +15,7 @@ window.onload = () => {
         selectedId: 3
     });
 
-    const TabsFaq = new Tabs(".faq-tabs", {});
+    const TabsFaq = new Tabs(".faq-tabs", {
+        multiTab: true,
+    });
 }
