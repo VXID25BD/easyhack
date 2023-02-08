@@ -1,2 +1,15 @@
 footer.footer.outer 
     .container
+        +title-decor("КОНТАКТЫ")
+        .footer__body
+            .footer__img 
+                img(src="", alt="")
+            form.footer__form
+                .footer__inputs
+                    .footer__input-wrapper 
+                        input(class="footer__input", id="name", placeholder="Ваше имя")
+                    .footer__input-wrapper 
+                        input(class="footer__input", id="email", placeholder="E-mail")
+                .footer__area-wrapper 
+                    area(class="footer__area", id="comment", placeholder="Комментарий")
+                +button("button-submit")(type="submit")
