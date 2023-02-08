@@ -1,5 +1,7 @@
 import Slider from "../../components/slider/slider";
 import Select from "../../components/select-platform/select-platform";
+import Tabs from "../../components/tabs/tabs";
+
 
 window.onload = () => {
     const functionSlider = new Slider(".slider", {});
@@ -12,6 +14,6 @@ window.onload = () => {
     const TariffsPlatform = new Select(".tariffs__select-platform", {
         selectedId: 3
     });
-    document.querySelectorAll(".faq__question").forEach(q => q.addEventListener("click", (e) => e.target.classList.toggle("_active")));
 
+    const TabsFaq = new Tabs(".faq-tabs", {});
 }

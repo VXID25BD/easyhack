@@ -1,0 +1,6 @@
+include ./__tab/tabs__tab.pug 
+
+mixin tabs(className, data)
+    .tabs
+        each item in data 
+            +tab(item.title, item.body)
