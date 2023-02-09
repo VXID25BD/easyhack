@@ -1,0 +1,11 @@
+include ./nav/nav.pug
+
+mixin header-body()
+    .header-body 
+        button.menu__icon
+            span
+        a.logo(class="logo", href="#") EASYHACK
+            .header__body
+                .menu 
+                    +nav()
+                +dropdown("language")

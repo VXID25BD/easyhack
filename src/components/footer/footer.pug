@@ -5,6 +5,10 @@ footer.footer.outer
         +title-decor()
             h2 КОНТАКТЫ
         .footer__body
-            .footer__img 
-                img(src="", alt="")
+            .footer__img
+                .footer__img-box
+                    img(src=require("../../assets/images/footer/box.png"), alt="Box")
+                .footer__img-red-smoke
+                    img(src=require("../../assets/images/footer/red-smoke.png"), alt="Red smoke")
             +form-callback()(class="footer__form-callback")
+        include ../header/header.pug

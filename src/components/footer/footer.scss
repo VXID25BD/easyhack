@@ -24,11 +24,29 @@
         z-index: -1;
     }
 
+    &__img{
+        max-width: 530px;
+        position: relative;
+        bottom: -145px;
+        align-content: flex-end;
 
+        img{
+            width: 100%;
+        }
+        &-red-smoke{
+            position: absolute;
+            bottom: 35%;
+            left: 25%;
+            width: 350px;
+            height: 442px;
+        }
+    }
     &__body{
         width: 100%;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding-bottom: 145px;
     }
     &__form-callback{
         flex: 0 1 644px;

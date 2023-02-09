@@ -1,0 +1,32 @@
+.nav{
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        gap: 80px;
+
+        li{
+            position: relative;
+            padding-bottom: 7px;
+
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: scale(0) translateX(-50%);
+                width: 25px;
+                height: 3px;
+                background: $color-orange_linear;
+                transition: .3s;
+                border-radius: 5px;
+            }
+
+            &:hover::after{transform: scale(1) translateX(-50%);}
+        }
+        a{
+            color: $color-text_white;
+            font-size: 17px;
+            font-weight: $fw_bold;
+        }
+    }
+}
