@@ -1,0 +1,13 @@
+include ./form-callback/form-callback.pug
+
+section.contacts.outer 
+    .container
+        +title-decor()
+            h2 КОНТАКТЫ
+        .contacts__body
+            .contacts__img
+                .contacts__img-box
+                    img(src=require("../../assets/images/contacts/box.png"), alt="Box")
+                .contacts__img-red-smoke
+                    img(src=require("../../assets/images/contacts/red-smoke.png"), alt="Red smoke")
+            +form-callback()(class="contacts__form-callback")

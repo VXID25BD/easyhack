@@ -94,11 +94,4 @@ class Dropdown{
     }
 }
 
-const languageDropdown = new Dropdown(".language", {
-    selectedId: 1,
-    items: [
-        {id: 1, img: "en.png", value: "En"},
-        {id: 2, img: "ru.png", value: "Ru"},
-    ]
-})
-
+export default Dropdown;

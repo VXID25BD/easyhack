@@ -2,5 +2,14 @@
     display: flex;
     align-items: center;
     
+    .logo{
+        color: $color-text_white;
+        font-size: 32px;
+        font-weight: $fw_black;
+    }
     .language{margin-left: 66px;}
+    &__wrapper{
+        display: flex;
+        align-items: center;
+    }
 }
