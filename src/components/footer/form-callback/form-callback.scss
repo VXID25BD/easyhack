@@ -1,0 +1,57 @@
+.form-callback{
+    padding: 75px 60px;
+    position: relative;
+
+    h5{margin-bottom: 30px;}
+
+    &__body{
+        padding: 48px 32px 33px 62px;
+        background-color: $color-white_solid;
+        border-radius: 5px;
+    }
+
+    &__social-button{
+        position: absolute;
+
+        &_left{
+            bottom: 25px;
+            left: 0;
+        }
+        &_right{
+            top: 25px;
+            right: 0;
+        }
+    }
+    &__inputs{
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        margin-bottom: 45px;
+    }
+    &__button{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__textarea{resize: none;}
+    &__input-wrapper{flex: 1 1 50%;}
+    &__social-button{
+        position: absolute;
+    }
+    &__input-wrapper{
+        padding-bottom: 17px;
+        align-items: center;
+    }
+    &__input-wrapper,
+    &__textarea-wrapper{
+        display: flex;
+        gap: 10px;
+        border-bottom: 1px solid rgba($color-black_solid, .4);
+    }
+    &__textarea-wrapper{margin-bottom: 48px;}
+    &__input,
+    &__textarea{
+        width: 100%;
+        background-color: transparent;
+    }
+}
