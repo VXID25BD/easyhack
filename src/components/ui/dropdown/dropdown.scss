@@ -1,15 +1,19 @@
 .dropdown{
     position: relative;
-    max-width: 138px;
+    width: 100%;
+    height: 100%;
 
     &__header{
+        height: 100%;
+        width: 100%;
         cursor: pointer;
         display: flex;
         align-items: center;
         gap: 15px;
-        padding: 16px 19px;
+        padding: 19px 16px;
         border-radius: 5px;
         background-color: $color-white_solid;
+        text-transform: uppercase;
     }
     &._open &__body{display: flex;}
 
@@ -30,9 +34,9 @@
         display: flex;
         align-items: center;
         gap: 15px;
-        padding: 16px 19px;
+        padding: 19px 16px;
         transition: .3s;
-
+        text-transform: uppercase;
         &:hover{background-color: $color-grey_solid;}
     }
     &__value{

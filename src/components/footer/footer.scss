@@ -1,7 +1,17 @@
 .footer{
     padding-bottom: 45px;
+    position: relative;
+    z-index: 1;
 
     .container{
         max-width: 1500px;
+    }
+
+    &__header-body{margin-bottom: 60px;}
+
+    .copyright{
+        font-size: 17px;
+        text-align: center;
+        color: $color-white_solid;
     }
 }

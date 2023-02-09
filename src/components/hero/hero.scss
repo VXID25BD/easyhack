@@ -1,8 +1,6 @@
 .hero{
     padding-top: $header-height + 99px;
-    background-image: url("../../assets/images/hero/bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url("../../assets/images/hero/bg.jpg") center center/cover no-repeat;
     color: $color-text_white;
     position: relative;
 
@@ -13,7 +11,7 @@
         left: 0;
         height: 164px;
         width: 100%;
-        background-image: url("../../assets/images/hero/linear.png");
+        background: url("../../assets/images/hero/linear.png") center center/cover no-repeat;
     }
 
     .hero__body{
