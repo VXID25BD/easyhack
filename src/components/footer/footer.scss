@@ -1,0 +1,67 @@
+.footer{
+    padding-top: 70px;
+    padding-bottom: 45px;
+    background: url("../../assets/images/footer/bg.png") center center/cover no-repeat;
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .title-decor{
+        margin-bottom: 10px;
+
+        &::before{z-index: -1;}
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 708px;
+        
+        z-index: -1;
+    }
+
+    &__input-wrapper{padding-bottom: 17px;}
+    &__input-wrapper,
+    &__textarea-wrapper{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 1px solid rgba($color-black_solid, .4);
+    }
+    &__input,
+    &__textarea{
+        width: 100%;
+        background-color: transparent;
+    }
+    &__body{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &__form{
+        border-radius: 5px;
+        flex: 0 1 644px;
+        padding: 48px 32px 33px 62px;
+        background-color: $color-white_solid;
+    }
+    &__inputs{
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        margin-bottom: 45px;
+    }
+    &__button{
+        display: flex;
+        justify-content: center;
+    }
+    &__textarea-wrapper{
+        margin-bottom: 48px;
+        align-items: start;
+    }
+    &__textarea{resize: none;}
+    &__input-wrapper{flex: 1 1 50%;}
+}
