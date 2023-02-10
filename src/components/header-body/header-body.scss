@@ -92,7 +92,7 @@
                 left: 0;
                 width: 100%;
                 height: 98px;
-                background: $color-blue_linear;
+                background: $color-blue_solid;
             }
 
             &._open{top: 0;}
@@ -149,6 +149,40 @@
             &__link{
                 font-size: 24px;
                 color: $color-black_solid
+            }
+        }
+    }
+}
+
+@media (max-width: $point_sm){
+    .header-body{
+        &__col_actions{gap: 9px;}
+
+        .logo{font-size: 15px;}
+
+        .dropdown{
+            width: 24px;
+            &__header,
+            &__item{
+                background-color: $color-black_solid;
+                gap: 0;
+                padding: 11.5px 0px;
+                color: $color-white_solid;
+            }
+            &__body{background-color: $color-black_solid;}
+            &__img{display: none;}
+            &__value{font-size: 12px;}
+            &__img{
+                width: 20px;
+                height: 14px;
+            }
+        }
+        .profile{
+            padding: 11px 20px 10px 20px;
+
+            svg{
+                width: 12px;
+                height: 14px;
             }
         }
     }
