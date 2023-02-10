@@ -1,3 +1,2 @@
-mixin title-decor(mods="")
-    div(class=mods ? "title-decor " + mods : "title-decor")
-        block
+mixin title-decor(text, mods="")
+    span(class=mods ? "title-decor " + mods : "title-decor")= text

@@ -9,19 +9,20 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        height: 164px;
+        height: 19%;
         width: 100%;
         background: url("../../assets/images/hero/linear.png") center center/cover no-repeat;
     }
-
-    .hero__body{
-        display: flex;
-        align-items: center;
-    }
     .offer{
+        max-width: 618px;
+
         .b1+.b1{margin-top: 30px;}
+        .b1{
+            margin-bottom: 46px;
+            line-height: 1.5;
+        }
         h1{
-            max-width: 700px;
+            max-width: 611px;
             margin-bottom: 30px;
             padding-bottom: 30px;
             position: relative;
@@ -42,5 +43,52 @@
         z-index: 5;
 
         img{max-width: 100%;}
+
+        &_car{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            width: 1048px;
+
+        }
+        &_kit{
+            left: -10vw;
+        }
+    }
+}
+
+@media (max-width: $point_xxxl){
+    .hero{
+        &__img{
+            &_kit{
+                left: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: $point_xxl){
+    .hero{
+        &__body{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        .offer{
+            h1{
+                margin-bottom: 30px;
+                padding-bottom: 30px;
+                position: relative;
+    
+                &::after{
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+        &__img{
+            &_car{display: none;}
+        }
     }
 }

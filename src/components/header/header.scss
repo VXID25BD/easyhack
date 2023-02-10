@@ -6,12 +6,8 @@
     z-index: 10;
     height: $header-height;
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
 
-    .container{
-        max-width: 1500px;
-        display: flex;
-        align-items: center;
-    }
+    .container{max-width: 1500px;}
 }
