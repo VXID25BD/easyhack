@@ -16,7 +16,7 @@ const renderTemplate = (items, selectedId) => {
             <img src=${require(`../../../assets/images/lang/${selectItem.img}`)} alt="${selectItem.value}">
         </div>
         <div class="dropdown__value">${selectItem.value}</div>
-        <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="dropdown__icon-arrow" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 5L10 0L0 0L5 5Z" fill="#2E3A59"/>
         </svg>
 

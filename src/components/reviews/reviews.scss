@@ -2,7 +2,6 @@
     padding-top: 170px;
     padding-bottom: 40px;
     background: url("../../assets/images/reviews/bg.jpg") center center/cover no-repeat;
-    position: relative;
 
     .container{
         display: flex;
@@ -18,15 +17,5 @@
         margin-bottom: 54px;
         position: relative;
         z-index: 1;
-    }
-
-    &::after{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 125px;
-        width: 100%;
-        background-image: url("../../assets/images/reviews/decor.png") center center/cover no-repeat;
     }
 }

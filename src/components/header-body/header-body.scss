@@ -3,7 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    gap: 40px;
+
     .logo{
         color: $color-text_white;
         font-size: 32px;
@@ -11,32 +12,144 @@
         position: relative;
         z-index: 1;
     }
-    .language{
-        margin-left: 66px;
-        margin-right: 15px;
-        max-width: 123px;
-        max-height: 58px;
+
+    .menu{
+        flex: 0 1 942px;
     }
-    &__wrapper{
-        display: flex;
-        align-items: center;
+
+    &__col{
+        &_menu-button{display: none;}
+        &_actions{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+        }
     }
 
     .profile{
         cursor: pointer;
         background: $color-orange_linear;
         border-radius: 5px;
-        height: 58px;
-        width: 77px;
+        padding: 17px 26px 16px 26px;
         display: flex;  
         align-items: center;
         justify-content: center;
+        position: relative;
+        z-index: 1;
 
         svg{
             width: 25px;
             height: 27px;
 
             path{fill: $color-white_solid}
+        }
+    }
+}
+
+
+@media(max-width: $point_xxl){
+    .header-body{
+        .logo{font-size: 24px;}
+        .nav__link{font-size: 16px;}
+        .dropdown{
+            &__icon-arrow{display: none;}
+            &__value{font-size: 16px;}
+            &__img{
+                flex: 0 0 24px;
+                height: 18px;
+            }
+        }
+    }
+}
+
+@media(max-width: $point_xl){
+    .header-body{
+        &__col{
+            flex: 0 1 33.333%;
+
+            &_logo{
+                display: flex;
+                justify-content: center;
+            }
+            &_actions{justify-content: end;}
+            &_menu-button{display: block;}
+        }
+
+        .menu{
+            position: fixed;
+            top: -200%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $color-white_solid;
+            transition: .3s;
+
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 98px;
+                background: $color-blue_linear;
+            }
+
+            &._open{top: 0;}
+
+            &__button{
+                background-color: transparent;
+                position: relative;
+                z-index: 10;
+                width: 30px;
+                height: 20px;
+
+                &::before,
+                &::after,
+                span{
+                    position: absolute;
+                    left: 0;
+                    background-color: $color-white_solid;
+                    width: 100%;
+                    height: 20%;
+                    border-radius: 2px;
+                }
+                &::before,
+                &::after{
+                    content: "";
+                    transition: .3s;
+                }
+                &::before{top: 0;}
+                &::after{bottom: 0;}
+                span{
+                    top: 50%;
+                    transform: scale(1) translateY(-50%);
+                }
+                &._open::before{
+                    top: 50%;
+                    transform: translateY(-50%) rotate(-45deg);
+                }
+                &._open::after{
+                    top: 50%;
+                    transform: translateY(-50%) rotate(45deg);
+                }
+                &._open span{transform: scale(0);}
+            }
+        }
+        .nav{
+            height: 100%;
+
+            &__Wrapper{
+                height: 100%;
+                flex-direction: column;
+                justify-content: center;
+                gap: 40px;
+            }
+
+            &__link{
+                font-size: 24px;
+                color: $color-black_solid
+            }
         }
     }
 }
