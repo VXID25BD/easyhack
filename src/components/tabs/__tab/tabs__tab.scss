@@ -59,3 +59,13 @@
         }
     }
 }
+
+
+@media (max-width: $point_sm) {
+    .tab-tabs{
+        &__trigger,
+        &__body{
+            padding: 25px;
+        }
+    }
+}

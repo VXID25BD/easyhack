@@ -25,11 +25,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1,h2{font-weight: $fw_extrabold;}
-h2{font-size: 45px;}
+h2{
+    font-size: 45px;
+    text-transform: uppercase;
+}
 h3{font-size: 30px;}
 h4{font-size: 21px;}
 h5{font-size: 18px;}
 
+@media (max-width: $point_md){
+    h2{font-size: 35px;}
+}
+
+@media (max-width: $point_sm){
+    h2{font-size: 30px;}
+}
 
 .outer{
     padding-right: 20px;

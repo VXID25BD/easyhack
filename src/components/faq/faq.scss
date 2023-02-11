@@ -26,3 +26,21 @@
         text-decoration: underline;
     }
 }
+
+@media (max-width: $point_md) {
+    .faq{
+        padding-top: 40px;
+
+        h2{margin-bottom: 45px;}
+    }
+}
+
+@media (max-width: $point_sm) {
+    .faq{
+        h2{
+            font-size: 26px;
+        }
+        h5{font-size: 13px;}
+        .b2{font-size: 11px;}
+    }
+}
