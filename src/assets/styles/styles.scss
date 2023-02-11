@@ -64,6 +64,16 @@ h5{font-size: 18px;}
 @import "../../components/slider/slider.scss";
 @import "../../components/ui/dropdown/dropdown.scss";
 
+/* UI */
+@import "../../components/ui/button-text/bt1/bt1.scss";
+@import "../../components/ui/button/button.scss";
+@import "../../components/ui/button/button-rhomb/button-rhomb.scss";
+@import "../../components/ui/button/_play/_play.scss";
+@import "../../components/ui/button/_border/_border.scss";
+@import "../../components/ui/body/b1/b1.scss";
+@import "../../components/ui/body/b2/b2.scss";
+
+
 /* COMPONENTS */
 @import "../../components/title-decor/title-decor.scss";
 @import "../../components/title-decor/_between/title-decor_between.scss";
@@ -95,13 +105,3 @@ h5{font-size: 18px;}
 
 @import "../../components/contacts/contacts.scss";
 @import "../../components/contacts/form-callback/form-callback.scss";
-
-
-/* UI */
-@import "../../components/ui/button-text/bt1/bt1.scss";
-@import "../../components/ui/button/button.scss";
-@import "../../components/ui/button/button-rhomb/button-rhomb.scss";
-@import "../../components/ui/button/_play/_play.scss";
-@import "../../components/ui/button/_border/_border.scss";
-@import "../../components/ui/body/b1/b1.scss";
-@import "../../components/ui/body/b2/b2.scss";

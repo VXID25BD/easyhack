@@ -9,9 +9,13 @@
         background-color: $color-white_solid;
         border-radius: 5px;
     }
-
     &__social-button{
         position: absolute;
+
+        svg{
+            width: 48px;
+            height: 48px;
+        }
 
         &_left{
             bottom: 25px;
@@ -35,9 +39,7 @@
 
     &__textarea{resize: none;}
     &__input-wrapper{flex: 1 1 50%;}
-    &__social-button{
-        position: absolute;
-    }
+
     &__input-wrapper{
         padding-bottom: 17px;
         align-items: center;
@@ -47,11 +49,102 @@
         display: flex;
         gap: 10px;
         border-bottom: 1px solid rgba($color-black_solid, .4);
+
+        svg{
+            width: 18px;
+            height: 18px;
+            fill: rgba($color-black_solid, .43);
+        }
     }
     &__textarea-wrapper{margin-bottom: 48px;}
     &__input,
     &__textarea{
         width: 100%;
         background-color: transparent;
+    }
+
+    &__input::placeholder,
+    &__textarea::placeholder{
+        font-size: 14px;
+        color: rgba($color-black_solid, .43);
+    }
+}
+
+
+@media (max-width: $point_xl){
+    .form-callback{
+        padding: 120px 0px 0px;
+
+        text-align: center;
+
+        &__inputs{
+            flex-direction: column;
+            width: 100%;
+            gap: 40px;
+        }
+        &__input-wrapper{width: 100%;}
+
+        &__social-button{
+        
+            &_left{
+                top: 20px;
+                bottom: auto;
+                left: 29.5%;
+            }
+            &_right{
+                top: 20px;
+                right: 29.5%;
+            }
+        }
+    }
+}
+
+@media (max-width: $point_md){
+    .form-callback{
+        padding: 60px 0px 0px;
+
+        &__body{padding: 45px 29px 29px 29px;}
+
+        &__social-button{
+            width: 75px;
+            height: 75px;
+
+            &_left{
+                top: 0;
+                bottom: auto;
+                left: 34.75%;
+            }
+            &_right{
+                top: 0;
+                right: 34.75%;
+            }
+
+            svg{
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: $point_sm){
+    .form-callback{
+        &__body{padding: 45px 20px 29px 20px;}
+
+        &__social-button{
+            &_left{
+                left: 20%;
+            }
+            &_right{
+                right: 20%;
+            }
+        }
+        &__input::placeholder,
+        &__textarea::placeholder{
+            font-size: 13px;
+        }
+        h5{font-size: 14px;}
+        &__textarea-wrapper{margin-bottom: 30px;}
     }
 }

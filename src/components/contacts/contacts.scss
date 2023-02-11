@@ -39,3 +39,43 @@
         &::before{z-index: -1;}
     }
 }
+
+@media (max-width: $point_xl){
+    .contacts{
+        h2{margin-bottom: 40px;}
+
+        &__body{padding-bottom: 40px;}
+        &__img-box{display: none;}
+        &__img{
+            position: absolute;
+            bottom: 0;
+            left: -150px;
+            z-index: 2;
+        }
+        &__body{
+            justify-content: center;
+        }
+    }
+}
+
+
+@media (max-width: $point_md){
+    .contacts{
+        &__form-callback{
+            flex: 0 1 550px;
+        }
+        &__img-red-smoke{
+            left: 30px;
+            bottom: -100px;
+            max-width: 220px;
+        }
+    }
+}
+
+@media (max-width: $point_sm){
+    .contacts{
+        &__form-callback{
+            flex: 0 1 280px;
+        }
+    }
+}
