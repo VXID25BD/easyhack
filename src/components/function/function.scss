@@ -1,45 +1,79 @@
 .function{
     .container{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 570px 640px;
+        grid-template-rows: auto;
+        column-gap: 90px;
+        align-items: start;
     }
 
-    .col{
+    &__col{
+        grid-row-start: 1;
+        grid-row-end: 5;
+    }
+    &__header{
+        grid-column-start: 2;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-bottom: 60px;
 
-        h2{margin-bottom: 25px;}
-        
-        & > .b1{
+        h2{
+            margin-bottom: 25px;
+            max-width: 64%;
+        }
+        .b1{
             max-width: 500px;
             color: $color-text_secondary;
-            margin-bottom: 60px;
         }
-        ul{
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-            margin-bottom: 70px;
-            
-            li{
-                font-size: 18px;
-                font-weight: $fw_bold;
+    }
 
-                span{font-weight: $fw_regular;}
-            }
-        }
-        .warning{margin-bottom: 60px;}
+    &__description{
+        grid-column-start: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 70px;
+        margin-bottom: 60px;
     }
 
     &__actions{
+        grid-column-start: 2;
+        display: flex;
+        justify-content: center;
         display: flex;
         align-items: center;
         gap: 24px;
     }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        li{
+            font-size: 18px;
+            font-weight: $fw_bold;
+            position: relative;
+            padding-left: 24px;
+
+            span{font-weight: $fw_regular;}
+
+            &::before{
+                content: "";
+                position: absolute;
+                top: 4px;
+                left: 0;
+                display: block;
+                width: 10px;
+                height: 10px;
+                transform: rotate(-45deg);
+                background-color: $color-orange_solid;
+            }
+        }
+    }
+
     .select-platform{margin-bottom: 40px;}
 }
 
@@ -52,4 +86,10 @@
     background-color: $color-white_solid;
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.04);
     border-radius: 5px;
+}
+
+@media (max-width: $point_xxl){
+    .function{
+
+    }
 }

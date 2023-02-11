@@ -10,12 +10,14 @@
         gap: 30px;
     }
     &__wrapper{
+        width: 100%;
         display: flex;
         align-items: center;
         position: relative;
         transition: 1s;
     }
     &__slide{
+        width: 100%;
         flex: 1 0 100%;
         display: flex;
         align-items: center;
