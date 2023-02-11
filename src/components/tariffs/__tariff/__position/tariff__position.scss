@@ -1,6 +1,23 @@
 .tariff__position{
     display: flex;
-    align-items: center;
     gap: 12px;
     font-size: 18px;
+
+    svg{
+        width: 25px;
+        height: 24px;
+    }
+}
+
+
+@media (max-width: $point_sm){
+    .tariff__position{
+        gap: 15px;
+        font-size: 14px;
+
+        svg{
+            flex: 0 0 16px;
+            height: 16px;
+        }
+    }
 }

@@ -42,3 +42,24 @@
         gap: 27px;
     }
 }
+
+@media (max-width: $point_sm){
+    .tariff-tariffs{        
+        &__price{
+            font-size: 35px;
+
+            sup{margin-left: 11px;}
+        }
+        &__body{
+            padding: 0px 30px;
+            margin-bottom: 30px;
+        }
+        &__footer{
+            width: 100%;
+            button{
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}

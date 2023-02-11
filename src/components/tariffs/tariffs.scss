@@ -16,7 +16,45 @@
         justify-content: space-between;
         gap: 36px;
     }
-    &__tariff{
-        flex: 1 0 416px;
+    &__tariff{flex: 0 1 416px;}
+}
+
+@media (max-width: $point_xxl){
+    .tariffs{
+        &__body{gap: 20px;}
+    }
+}
+
+@media (max-width: $point_xl){
+    .tariffs{
+        &__body{
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        &__tariff{
+            width: 100%;
+            max-width: 547px;
+            flex: 0 1 auto;
+        }
+    }
+}
+
+@media (max-width: $point_sm){
+    .tariffs{
+        padding-top: 30px;
+
+        &__body{
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        &__tariff{
+            width: 100%;
+            max-width: 547px;
+            flex: 0 1 auto;
+
+            button{width: 100%;}
+        }
     }
 }
