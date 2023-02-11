@@ -3,7 +3,21 @@ import Select from "../../components/select-platform/select-platform";
 import Tabs from "../../components/tabs/tabs";
 import Dropdown from "../../components/ui/dropdown/dropdown";
 
+const resize = () => {
+    const buttonText = document.querySelector(".offer").querySelector(".button_border").querySelector(".bt1");
+
+    if (document.body.clientWidth < 768.98){
+        buttonText.innerText = "Видео-ролик";
+    } else {
+        buttonText.innerText = "Посмотреть видео";
+        
+    }
+}
+
 window.onload = () => {
+    resize();
+    window.addEventListener("resize", resize);
+
     const functionSlider = new Slider(".slider", {});
     const reviewsSlider = new Slider(".reviews-slider", {});
     

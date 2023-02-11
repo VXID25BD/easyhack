@@ -16,10 +16,17 @@
     .offer{
         max-width: 618px;
 
-        .b1+.b1{margin-top: 30px;}
         .b1{
             margin-bottom: 46px;
             line-height: 1.5;
+        }
+
+        .b1:nth-child(2){margin-bottom: 30px;}
+
+        &__actions{
+            display: flex;
+            align-items: center;
+            gap: 30px;
         }
         h1{
             max-width: 611px;
@@ -76,6 +83,12 @@
             text-align: center;
         }
         .offer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .b1{margin-bottom: 35px;}
+            .b1:nth-child(2){margin-bottom: 25px;}
             h1{
                 margin-bottom: 30px;
                 padding-bottom: 30px;
@@ -86,9 +99,89 @@
                     transform: translateX(-50%);
                 }
             }
+            &__actions{
+                .button{
+                    width: 100%;
+                    justify-content: center;
+                }
+
+                flex-direction: column;
+            }
         }
         &__img{
             &_car{display: none;}
+        }
+    }
+}
+
+@media (max-width: $point_md){
+    .hero{
+        .offer{
+            h1{
+                font-size: 42px;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+
+                svg{
+                    width: 170px;
+                    height: 34px;
+                }
+            }
+            .b1{font-size: 14px;}
+            .bt1{font-size: 12px;}
+            &__actions{
+                max-width: 180px;
+                gap: 15px;
+
+                .button{
+                    gap: 13px;
+                    max-height: 64px;
+
+                    svg{
+                        width: 32px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $point_sm){
+    .hero{
+        padding-top: $header-height + 50px;
+        padding-bottom: 80px;
+        .offer{
+            h1{
+                font-size: 30px;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+
+                svg{
+                    width: 115px;
+                    height: 22px;
+                }
+            }
+            .b1{
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+            .b1:nth-child(2){margin-bottom: 25px;}
+
+            &__actions{
+                max-width: 144px;
+
+                .button{
+                    gap: 13px;
+                    padding: 18px 25px;
+                    max-height: 54px;
+
+                    svg{
+                        width: 32px;
+                        height: 18px;
+                    }
+                }
+            }
         }
     }
 }
