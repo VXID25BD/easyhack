@@ -10,3 +10,25 @@
     
     svg{fill: $color-white_solid;}
 }
+
+@media (max-width: $point_md){
+    .button{
+        gap: 13px;
+        
+        svg{
+            width: 32px;
+            height: 18px;
+        }
+    }
+}
+
+
+@media (max-width: $point_sm){
+    .button{
+        .bt1{font-size: 12px;}
+
+        padding: 0px 25px;
+        max-width: 144px;
+        max-height: 54px;
+    }
+}

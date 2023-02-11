@@ -128,20 +128,11 @@
                 }
             }
             .b1{font-size: 14px;}
-            .bt1{font-size: 12px;}
             &__actions{
                 max-width: 180px;
                 gap: 15px;
 
-                .button{
-                    gap: 13px;
-                    max-height: 64px;
-
-                    svg{
-                        width: 32px;
-                        height: 18px;
-                    }
-                }
+                .button{max-height: 64px;}
             }
         }
     }
