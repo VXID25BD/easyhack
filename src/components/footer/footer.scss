@@ -15,3 +15,9 @@
         color: $color-white_solid;
     }
 }
+
+@media (max-width: $point_xl){
+    .footer{
+        .header-body{display: none;}
+    }
+}

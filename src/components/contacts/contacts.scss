@@ -30,9 +30,7 @@
         justify-content: space-between;
         padding-bottom: 145px;
     }
-    &__form-callback{
-        flex: 0 1 644px;
-    }
+    &__form-callback{flex: 0 1 644px;}
     .title-decor{
         margin-bottom: 10px;
 
@@ -45,37 +43,32 @@
         h2{margin-bottom: 40px;}
 
         &__body{padding-bottom: 40px;}
-        &__img-box{display: none;}
+
         &__img{
-            position: absolute;
-            bottom: 0;
-            left: -150px;
-            z-index: 2;
+            &-box{display: none;}
+            &-red-smoke{
+                position: absolute;
+                z-index: 2;
+                max-width: 220px;
+                bottom: -90px;
+                left: -320px;
+            }
         }
-        &__body{
-            justify-content: center;
-        }
+        &__body{justify-content: center;}
     }
 }
 
 
 @media (max-width: $point_md){
     .contacts{
-        &__form-callback{
-            flex: 0 1 550px;
-        }
-        &__img-red-smoke{
-            left: 30px;
-            bottom: -100px;
-            max-width: 220px;
-        }
+        &__form-callback{flex: 0 1 550px;}
+        &__img-red-smoke{left: -220px;}
     }
 }
 
 @media (max-width: $point_sm){
     .contacts{
-        &__form-callback{
-            flex: 0 1 280px;
-        }
+        &__form-callback{flex: 0 1 280px;}
+        &__img-red-smoke{left: -200px;}
     }
 }
