@@ -2,6 +2,7 @@ include ./reviews-slider/reviews-slider.pug
 
 section.reviews.outer 
     .container
-        +title-decor()
-            h2 ЧТО ГОВОРЯТ О НАС
+        h2 
+            +title-decor("ЧТО ГОВОРЯТ О НАС")
+            
         +reviews-slider()

@@ -2,8 +2,9 @@ include ./__tariff/tariffs__tariff.pug
 
 section.tariffs.outer 
     .container
-        +title-decor("title-decor_between")
-            h2 ТАРИФЫ
+        h2
+            +title-decor("ТАРИФЫ")(class="title-decor_between")
+       
         +select-platform("tariffs__select-platform")
         .tariffs__body 
             +tariffs__tariff("common")
