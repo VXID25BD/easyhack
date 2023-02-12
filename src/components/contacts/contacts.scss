@@ -45,11 +45,13 @@
         &__body{padding-bottom: 40px;}
 
         &__img{
+            bottom: 0;
             &-box{display: none;}
             &-red-smoke{
                 position: absolute;
                 z-index: 2;
                 max-width: 220px;
+                max-height: 280px;
                 bottom: -90px;
                 left: -320px;
             }

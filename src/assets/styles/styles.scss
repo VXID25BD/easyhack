@@ -14,7 +14,7 @@ body{
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 710px;
+        height: 12%;
         background: url("../../assets/images/footer/bg.png") center center/cover no-repeat;
     }
 }
@@ -60,6 +60,14 @@ h5{font-size: 18px;}
 ._fw-sb{font-weight: $fw_semibold;}
 ._fw-r{font-weight: $fw_regular;}
 
+
+// MAIN GRID
+.root{
+    display: flex;
+    flex-direction: column
+}
+
+.page{flex: 1 1 auto}
 // MODULES
 @import "../../components/slider/slider.scss";
 @import "../../components/ui/dropdown/dropdown.scss";
