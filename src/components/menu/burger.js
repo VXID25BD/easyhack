@@ -5,7 +5,6 @@ class Burger{
     constructor(selector, options){
         this.el = document.querySelector(selector);
         this.options = options;
-
         this.#setup();
     }
 
@@ -15,6 +14,11 @@ class Burger{
 
         this.clickHandler = this.clickHandler.bind(this);
         this.burgerButton.addEventListener("click", this.clickHandler)
+        
+    }
+
+    scrollTo(){
+
     }
 
     get isOpen(){
