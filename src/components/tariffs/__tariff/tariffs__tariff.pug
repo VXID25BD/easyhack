@@ -14,7 +14,7 @@ mixin tariffs__tariff(version)
             ul.tariff-tariffs__positions
                 each position in versionData.positions
                     +tariff__position(position.status, position.text)
-        .tariff-tariffs__price= versionData.price
-            sup ₽
+            .tariff-tariffs__price= versionData.price
+                sup ₽
         .tariff-tariffs__footer 
             +button("Приобрести")

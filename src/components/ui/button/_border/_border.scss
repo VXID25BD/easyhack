@@ -3,4 +3,9 @@
     border: 1px solid $color-white_solid;
     background: transparent;
     color: $color-text_white;
+
+    &:hover{
+        border: 1px solid $color-orange_solid;
+        background-color: $color-orange_solid;
+    }
 }

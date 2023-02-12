@@ -1,6 +1,8 @@
 .tariff-tariffs{
     background-color: $color-white_solid;
     border-radius: 5px 55px;
+    display: flex;
+    flex-direction: column;
 
     &__header{
         background: $color-tariff_common;
@@ -19,6 +21,7 @@
     &__body{
         padding: 0px 50px;
         margin-bottom: 15px;
+        flex: 1 1 auto;
     }
     &__price{
         font-size: 45px;

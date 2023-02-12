@@ -10,13 +10,16 @@
     h2{margin-bottom: 52px;}
     
     .select-platform{margin-bottom: 54px;}
+
     &__body{
         width: 100%;
         display: flex;
         justify-content: space-between;
         gap: 36px;
     }
-    &__tariff{flex: 0 1 416px;}
+    &__tariff{
+        flex: 0 1 416px;
+    }
 }
 
 @media (max-width: $point_xxl){

@@ -13,6 +13,10 @@
         align-items: center;
         justify-content: center;
         box-shadow: 0px 4px 25px rgba(10, 166, 254, 0.48), inset 0px 0px 25px rgba(0, 50, 180, 0.3);
+
+        &:hover{
+            background: $color-blue_linear_dark;
+        }
     }
     svg{
         transform: rotate(-45deg);

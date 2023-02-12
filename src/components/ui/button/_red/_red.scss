@@ -1,0 +1,25 @@
+.button_red{
+    padding: 0px 29px;
+    background: transparent;
+    background-color: $color-red_solid;
+
+    svg{
+        width: 33px;
+        height: 33px;
+    }
+
+    &:hover{
+        background: transparent;
+        background-color: darken($color-red_solid, 20%);
+    }
+}
+
+@media (max-width: $point_md){
+    .button_red{
+        
+        svg{
+            width: 32px;
+            height: 18px;
+        }
+    }
+}

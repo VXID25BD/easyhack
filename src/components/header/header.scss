@@ -11,3 +11,9 @@
 
     .container{max-width: 1500px;}
 }
+
+@media (max-width: $point_xl){
+    .header{
+        align-items: center;
+    }
+}
