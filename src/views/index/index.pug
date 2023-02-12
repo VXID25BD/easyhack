@@ -20,7 +20,9 @@ html(lang="ru")
         meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         link(href=require("../../assets/styles/styles.scss") rel="stylesheet")
-        title WEBPACK CONFIG PUG 2023
+        link(rel="shortcut icon", href=require("../../assets/images/favicon.ico"), type="image/gif")
+        link(rel="apple-touch-icon", href=require("../../assets/images/apple-touch-icon.png"))
+        title EASYHACK
     body
         .root
             include ../../components/header/header.pug
@@ -34,4 +36,3 @@ html(lang="ru")
             include ../../components/footer/footer.pug
         script(src=require("./main.js"))
         script(src=require("../../components/ui/dropdown/dropdown.js"))
-        script(src=require("../../components/menu/burger.js"))
