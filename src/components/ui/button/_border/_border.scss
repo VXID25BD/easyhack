@@ -5,7 +5,8 @@
     color: $color-text_white;
 
     &:hover{
-        border: 1px solid $color-orange_solid;
-        background-color: $color-orange_solid;
+        border: 1px solid $color-black_solid;
+        background: transparent;
+        background-color: $color-black_solid;
     }
 }
