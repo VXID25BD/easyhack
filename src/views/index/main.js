@@ -17,6 +17,7 @@ const resize = () => {
 }
 
 window.onload = () => {
+    console.log("Загрузка страницы");
     resize();
     window.addEventListener("resize", resize);
     

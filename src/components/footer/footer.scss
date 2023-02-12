@@ -7,7 +7,7 @@
         max-width: 1500px;
     }
 
-    &__header-body{margin-bottom: 60px;}
+    &__hmenu{margin-bottom: 60px;}
 
     .copyright{
         font-size: 17px;
@@ -18,6 +18,6 @@
 
 @media (max-width: $point_xl){
     .footer{
-        .header-body{display: none;}
+        .menu{display: none;}
     }
 }

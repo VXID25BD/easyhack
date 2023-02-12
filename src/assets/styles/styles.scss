@@ -64,7 +64,8 @@ h5{font-size: 18px;}
 // MAIN GRID
 .root{
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
 .page{flex: 1 1 auto}

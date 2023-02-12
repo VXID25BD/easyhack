@@ -2,49 +2,51 @@
 
 class Slider{
     constructor(selector, options={}){
-        this._el = document.querySelector(selector);
-        this._currentSlideId = 1;
-        this._options = options;
-        this._slides = [];
-        this._offset = 0;
+        this.el = document.querySelector(selector);
+        this.currentSlideId = 1;
+        this.options = options;
+        this.slides = [];
+        this.offset = 0;
 
-        this._setup();
+        this.#setup();
     }
 
-    _setup() {
-        this._buttonPrev = this._el.querySelector(".slider__button_prev");
-        this._buttonNext = this._el.querySelector(".slider__button_next");
-        this._wrapper = this._el.querySelector(".slider__wrapper");
+    #setup() {
+        this.buttonPrev = this.el.querySelector(".slider__button_prev");
+        this.buttonNext = this.el.querySelector(".slider__button_next");
+        this.wrapper = this.el.querySelector(".slider__wrapper");
 
-        this._el.querySelectorAll(".slider__slide").forEach((slide, index) => {
+        this.el.querySelectorAll(".slider__slide").forEach((slide, index) => {
             slide.setAttribute("data-id", ++index);
-            this._slides.push(slide);
+            this.slides.push(slide);
         });
 
-        this._countSlides = this._slides.length;
+        this.countSlides = this.slides.length;
 
+        this.wrapper.style.right = 0;
+        this.move();
         this.next = this.next.bind(this);
         this.prev = this.prev.bind(this);
-        this._buttonPrev.addEventListener("click", this.prev);
-        this._buttonNext.addEventListener("click", this.next);
+        this.buttonPrev.addEventListener("click", this.prev);
+        this.buttonNext.addEventListener("click", this.next);
     }
     get currentSlide(){
-        return this._slides.find(slide => Number(slide.dataset.id) === this._currentSlideId);
+        return this.slides.find(slide => Number(slide.dataset.id) === this.currentSlideId);
     }
-    _move() {
-        this._wrapper.style.right = this._offset * this._currentSlideId - this._offset;
+    move() {
+        this.wrapper.style.right = this.offset * this.currentSlideId - this.offset;
     }
     
     next() {
-        this._currentSlideId = this._currentSlideId < this._countSlides ? this._currentSlideId + 1 : 1;
-        this._offset = this.currentSlide.getBoundingClientRect().width;
-        this._move();
+        this.currentSlideId = this.currentSlideId < this.countSlides ? this.currentSlideId + 1 : 1;
+        this.offset = this.currentSlide.getBoundingClientRect().width;
+        this.move();
     }
 
     prev() {
-        this._currentSlideId = this._currentSlideId > 1 ? this._currentSlideId - 1 : this._countSlides;
-        this._offset = this.currentSlide.getBoundingClientRect().width;
-        this._move();
+        this.currentSlideId = this.currentSlideId > 1 ? this.currentSlideId - 1 : this.countSlides;
+        this.offset = this.currentSlide.getBoundingClientRect().width;
+        this.move();
     }
 }
 
