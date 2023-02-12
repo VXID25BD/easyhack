@@ -1,4 +1,4 @@
-.header-body{
+.menu{
     width: 100%;
     display: flex;
     align-items: center;
@@ -13,7 +13,7 @@
         z-index: 1;
     }
 
-    .menu{
+    &__body{
         flex: 0 1 942px;
     }
 
@@ -49,7 +49,7 @@
 
 
 @media(max-width: $point_xxl){
-    .header-body{
+    .menu{
         .logo{font-size: 24px;}
         .nav__link{font-size: 16px;}
         .dropdown{
@@ -64,7 +64,7 @@
 }
 
 @media(max-width: $point_xl){
-    .header-body{
+    .menu{
         &__col{
             flex: 0 1 33.333%;
 
@@ -76,7 +76,46 @@
             &_menu-button{display: block;}
         }
 
-        .menu{
+        &__button{
+            background-color: transparent;
+            position: relative;
+            z-index: 10;
+            width: 30px;
+            height: 20px;
+
+            &::before,
+            &::after,
+            span{
+                position: absolute;
+                left: 0;
+                background-color: $color-white_solid;
+                width: 100%;
+                height: 20%;
+                border-radius: 2px;
+            }
+            &::before,
+            &::after{
+                content: "";
+                transition: .3s;
+            }
+            &::before{top: 0;}
+            &::after{bottom: 0;}
+            span{
+                top: 50%;
+                transform: scale(1) translateY(-50%);
+            }
+            &._open::before{
+                top: 50%;
+                transform: translateY(-50%) rotate(-45deg);
+            }
+            &._open::after{
+                top: 50%;
+                transform: translateY(-50%) rotate(45deg);
+            }
+            &._open span{transform: scale(0);}
+        }
+        
+        &__body{
             position: fixed;
             top: -200%;
             left: 0;
@@ -96,45 +135,6 @@
             }
 
             &._open{top: 0;}
-
-            &__button{
-                background-color: transparent;
-                position: relative;
-                z-index: 10;
-                width: 30px;
-                height: 20px;
-
-                &::before,
-                &::after,
-                span{
-                    position: absolute;
-                    left: 0;
-                    background-color: $color-white_solid;
-                    width: 100%;
-                    height: 20%;
-                    border-radius: 2px;
-                }
-                &::before,
-                &::after{
-                    content: "";
-                    transition: .3s;
-                }
-                &::before{top: 0;}
-                &::after{bottom: 0;}
-                span{
-                    top: 50%;
-                    transform: scale(1) translateY(-50%);
-                }
-                &._open::before{
-                    top: 50%;
-                    transform: translateY(-50%) rotate(-45deg);
-                }
-                &._open::after{
-                    top: 50%;
-                    transform: translateY(-50%) rotate(45deg);
-                }
-                &._open span{transform: scale(0);}
-            }
         }
         .nav{
             height: 100%;
@@ -155,7 +155,7 @@
 }
 
 @media (max-width: $point_sm){
-    .header-body{
+    .menu{
         &__col_actions{gap: 9px;}
 
         .logo{font-size: 15px;}
