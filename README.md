@@ -1,2 +1,2 @@
 # easyhack
-https://brilliant-1f48e.github.io/easyhack/dist/
+https://vxid25bd.github.io/easyhack/dist/
